@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Vanilla JS - ToDoList</title>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>ToDoList JS</h1>
+    </div>
+  </header>
+
+  <div class="container todolist">
+  
+    <div class="input">
+      <input id="inputText" type="text" placeholder="Add List!">
+      <button id="addListButton" type="button"><i class="bi bi-journal-plus"></i></button>
+    </div>
+
+    <div class="lists">
+    </div>
+      
+  </div>
+  
+
+  <template> 
+    <div class="list">
+      <p id="listItem"></p>
+      <button id="listDoneButton" class="doneButton" type="button"><i class="bi bi-journal-check"></i></button>
+      <button id="listDeleteButton" class="deleteButton" type="button"><i class="bi bi-journal-x"></i></button>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
