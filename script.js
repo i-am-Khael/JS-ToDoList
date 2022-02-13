@@ -16,13 +16,13 @@ addListButton.addEventListener('click', () => {
 
 divList.addEventListener('click', eventTrigger => {
 
-  if (eventTrigger.target.className === 'bi bi-journal-check' ) {
+  if (eventTrigger.target.className === 'fa-solid fa-check' ) {
 
     doneTask(eventTrigger.target.closest('.list'));
 
   }
 
-  if (eventTrigger.target.className === 'bi bi-journal-x' ) {
+  if (eventTrigger.target.className === 'fa-solid fa-trash-can' ) {
 
     deleteTask(eventTrigger.target.closest('.list'));
 
