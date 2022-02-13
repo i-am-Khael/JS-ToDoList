@@ -1,42 +1,39 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 *, *::before, *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: #fff;
+  color: #444;
   width: 100%;
   height: 100%;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  background: #8a6d8a;
-}
-
-header {
-  color: #ddd;
-  padding: .7rem 0;
-  background: #8a6d8a;
-  box-shadow: 0 0 10px 1px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #444;
+  gap: 0 !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
-  width: 60%;
+  width: 80%;
+  height: 100%;
   margin: 0 auto;
 }
 
 .todolist {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  place-items: center;
-  gap: 1.3rem;
-  margin-top: 5rem;
-  padding: 3rem 2rem;
-  border-radius: 1rem;
-  box-shadow: inset 3px 3px 5px 2px rgba(255,255,255,0.1), 3px 3px 5px 2px rgba(0,0,0,0.1);
+  align-items: center;
+  justify-content: center;
+  padding: 0 5rem;
+  gap: 2rem;
 }
 
 .todolist div.input {
@@ -44,76 +41,79 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.3rem;
+}
+
+.todolist div.lists {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 div.input input {
-  color: #fff;
   width: 100%;
-  padding: .5rem 1rem;
-  background: transparent;
-  outline: none;
   border: none;
+  outline: none;
+  padding: .3rem 1rem;
+  color: #fff;
+  background: transparent;
   border-bottom: 1px solid #fff;
 }
 
-div.input button {
-  border: none;
-  outline: none;
-  background: transparent;
-}
-
-div.input button i {
-  font-size: 2.5em;
-  font-weight: 900;
+div.input span {
   color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-div.lists {
-  width: 100%;
+div.input input:focus {
+  border-bottom: 2px solid green;
 }
 
-div.list {
+div.input span:hover {
+  color: green;
+}
+
+div.lists div.list {
   width: 100%;
+  margin: 1rem 0;
+  padding: .5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 3px #111;
   gap: 1rem;
-  padding: 1rem 0;
 }
 
 div.list p {
-  width: 90%;
+  width: 100%;
+  color: #fff;
 }
 
-div.lists button {
-  border: none;
-  outline: none;
-  background: transparent;
+div.list span {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-div.lists button.doneButton i {
-  font-size: 2.2em;
-  font-weight: 900;
+div.list span.fa-check:hover {
   color: blue;
 }
 
-div.lists button.deleteButton i {
-  font-size: 2.2em;
-  font-weight: 900;
+div.list span.fa-trash-can:hover {
   color: red;
 }
 
-
 @media all and (max-width: 720px) {
-
+  
   .container {
     width: 90%;
     margin: 0 auto;
   }
-
+  
   .todolist {
-    margin: 5rem 0;
+    padding: 0;
   }
-
 }
